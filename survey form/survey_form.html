@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+
+  <h1>Survey Form</h1>
+
+  <form action="#" form-method="post">
+
+    <table>
+      <tr>
+        <td><label for="fullname">Full Name:</label></td>
+        <td><input type="text" id="fullname" name="fullname" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email Address:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+        </td>
+    </table>
+
+    <br>
+
+    <fieldset>
+      <legend>How satisfied are you with our service?</legend>
+      <label><input type="radio" name="satisfaction" value="Very Satisfied"> Very Satisfied</label><br>
+      <label><input type="radio" name="satisfaction" value="Satisfied"> Satisfied</label><br>
+      <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label><br>
+      <label><input type="radio" name="satisfaction" value="Dissatisfied"> Dissatisfied</label><br>
+      <label><input type="radio" name="satisfaction" value="Very Dissatisfied"> Very Dissatisfied</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>What features do you value most?</legend>
+      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label><br>
+      <label><input type="checkbox" name="features" value="Design"> Design</label><br>
+      <label><input type="checkbox" name="features" value="Customer Support"> Customer Support</label>
+    </fieldset>
+    <br>
+    <label for="role">What best describes you?</label>
+        <select name="role" id="role">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="hobbyist">Hobbyist</option>
+            <option value="other">Other</option>
+          </select><br>
+    <br>
+
+    <label for="comments">Additional comments or suggestions?</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+    <br><br>
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
