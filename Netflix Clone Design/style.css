@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Netflix Sans-Medium';
+    src: url(./netflix-font/NetflixSans-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Netflix Sans Light';
+    src: url(./netflix-font/NetflixSans-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Netflix Sans Regular';
+    src: url(./netflix-font/NetflixSans-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Netflix Sans Bold';
+    src: url(./netflix-font/NetflixSans-Bold.otf) format('opentype');
+}
+
+body {
+    background-color: #000;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Netflix Sans Light', sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 100px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* the dropdown still don't works will fix later... */
+.language-selection {
+    padding: 6px 10px;
+    background: transparent;
+    border: 1.2px solid white;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Netflix Sans Regular', sans-serif;
+    cursor: pointer;
+}
+
+.sign-in {
+    background-color: #d30d17;
+    border: 1.2px solid white;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Front */
+.front {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -3; /* cover the background with text*/
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -2; /* indicates the dimness of the background */
+}
+
+#head-title {
+    color: white;
+    font-family: 'Netflix Sans Bold', sans-serif;
+    font-size: 55px;
+}
+
+#head-title span{
+    display: block;
+}
+
+.front-content p {
+    font-family: 'Netflix Sans Light', sans-serif;
+    font-weight: lighter;
+    margin: 20px 0;
+}
+
+.email-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.front .email-form input[type="email"] {
+    padding: 12px;
+    width: 320px;
+    max-width: 100%;
+    border: 2px solid #e3e0e0;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Netflix Sans Regular', sans-serif;
+}
+
+.email-form button {
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 20px;
+    background-color: #d30d17;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Trending */
+.trends {
+    padding: 40px 20px;
+    background-color: #111111;
+}
+
+.trending-containers {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#trending-title {
+    font-family: 'Netflix Sans Medium', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.movie-rows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.movie-one,
+.movie-two,
+.movie-three,
+.movie-four,
+.movie-five {
+    min-width: 150px;
+    border: 2px solid white;
+}
+
+.slide-button button {
+    padding: 10px 15px;
+    font-size: 24px;
+    background-color: rgb(218, 0, 0);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Info Title */
+.reasons {
+    background-color: #111111;
+    padding: 3rem 1rem;
+}
+
+.info-containers {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#morereasons-title {
+    font-family: 'Netflix Sans Medium', sans-serif;
+    font-size: 30px;
+}
+
+/* Info Boxes */
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #111111;
+    justify-content: center;
+    max-width: 1700px;
+}
+
+.information>div {
+    background-color: #192145;
+    color: white;
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    padding: 1.6rem;
+    min-height: 350px;
+    border: 2px solid white;
+}
+
+.information h3 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: 'Netflix Sans Regular', sans-serif;
+}
+
+.information p {
+    line-height: 1.5;
+    color: #b8bbbd;
+    font-size: 15px;
+    font-family: 'Netflix Sans Light', sans-serif;
+}
+
+/* Footer */
+.footer-email{
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #111111;
+}
+
+.footer-email p {
+    margin-bottom: 15px;
+    font-family: 'Netflix Sans Light', sans-serif;
+}
+
+.footer-email .email-form input[type="email"] {
+    padding: 12px;
+    width: 500px;
+    max-width: 100%;
+    border: 2px solid #e3e0e0;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Netflix Sans Regular ', sans-serif;
+}
